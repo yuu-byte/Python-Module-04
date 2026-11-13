@@ -1,5 +1,5 @@
 import sys
-from typing import IO
+import typing
 
 
 def main() -> None:
@@ -12,7 +12,7 @@ def main() -> None:
     print(f"Accessing file '{filename}'")
 
     try:
-        file: IO[str] = open(filename, "r")
+        file: typing.IO[str] = open(filename, "r")
     except OSError as e:
         print(f"Error opening file '{filename}': {e}")
         return
